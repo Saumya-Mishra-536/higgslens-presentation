@@ -9,7 +9,7 @@ export default function S10Conclusion(_: SceneProps) {
 
   return (
     <div className="s10">
-      <h2 className="s10-title rise" style={{ animationDelay: "0.2s" }}>What the benchmark shows</h2>
+      <h2 className="s10-title rise" style={{ animationDelay: "0.2s" }}>What the simulated benchmark shows — not a discovery claim</h2>
       <div className="s10-findings">
         {FINDINGS.map((f, i) => (
           <article key={f.title} className="rise" style={{ animationDelay: `${0.4 + i * 0.28}s` }}>
