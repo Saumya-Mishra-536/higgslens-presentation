@@ -144,32 +144,32 @@ export const SCALING = {
 };
 
 export const WORKBENCH = {
-  headline: "Every result can be opened.",
-  body: "A four-view tour of the Streamlit evidence workbench. It reads saved metrics.json and test_predictions.csv artifacts; it does not train models on startup.",
+  headline: "Inspect the evidence, not just the headline scores.",
+  body: "Four views from the Streamlit workbench. The app reads saved metrics.json and test_predictions.csv artifacts; it does not train models on startup.",
   views: [
     {
       file: "dataset.png",
       name: "Dataset Observatory",
       tag: "Step 01 · Inputs & EDA",
-      body: "Inspect all 21 kinematic inputs and 7 invariant masses, with feature distributions, correlations and class balance.",
+      body: "Explore the 21 low-level kinematic inputs and 7 high-level invariant masses through feature distributions, correlations and class balance.",
     },
     {
       file: "overview.png",
       name: "Experiment Overview",
       tag: "Step 02 · Saved Runs",
-      body: "Browse the 15 saved 250k runs under higgs-split-v1 (seed 42), including the model leaderboard and headline metrics.",
+      body: "Review the saved 250k experiment leaderboard and headline metrics. These 15 runs are the 250k subset of the 45-run benchmark.",
     },
     {
       file: "experiments.png",
       name: "Experiment Comparison",
       tag: "Step 03 · Cross-Run View",
-      body: "Compare five model families across low_level, high_level and all feature groups, with consistent metric definitions.",
+      body: "Compare five model families across low_level, high_level and all feature groups using the same metric definitions.",
     },
     {
       file: "validation.png",
       name: "Validation & Threshold Analysis",
       tag: "Step 04 · Curves & Thresholds",
-      body: "Inspect ROC, precision–recall and calibration diagnostics. Threshold sliders are exploratory; official cutoffs are frozen using validation data.",
+      body: "Inspect ROC, precision–recall and calibration curves. Threshold sliders are exploratory; official operating points are selected using validation data.",
     },
   ],
 };
