@@ -145,31 +145,31 @@ export const SCALING = {
 
 export const WORKBENCH = {
   headline: "Every result can be opened.",
-  body: "Artifact-backed Streamlit workbench reading saved outputs—zero startup training.",
+  body: "A four-view tour of the Streamlit evidence workbench. It reads saved metrics.json and test_predictions.csv artifacts; it does not train models on startup.",
   views: [
     {
       file: "dataset.png",
-      name: "Dataset observatory",
+      name: "Dataset Observatory",
       tag: "Step 01 · Inputs & EDA",
-      body: "21 kinematic inputs + 7 invariant masses with distributions, correlations and class balance.",
+      body: "Inspect all 21 kinematic inputs and 7 invariant masses, with feature distributions, correlations and class balance.",
     },
     {
       file: "overview.png",
-      name: "Experiment registry",
+      name: "Experiment Overview",
       tag: "Step 02 · Saved Runs",
-      body: "Validates 15 saved runs (higgs-split-v1 · seed 42), 0 missing values, top run 0.8339.",
+      body: "Browse the 15 saved 250k runs under higgs-split-v1 (seed 42), including the model leaderboard and headline metrics.",
     },
     {
       file: "experiments.png",
-      name: "Model comparison",
+      name: "Experiment Comparison",
       tag: "Step 03 · Cross-Run View",
-      body: "Filters runs, 5 model families and 3 feature groups across leaderboard and efficiency.",
+      body: "Compare five model families across low_level, high_level and all feature groups, with consistent metric definitions.",
     },
     {
       file: "validation.png",
-      name: "Validation workbench",
+      name: "Validation & Threshold Analysis",
       tag: "Step 04 · Curves & Thresholds",
-      body: "ROC, PR and calibration curves, training curves and exploratory cutoff workbench.",
+      body: "Inspect ROC, precision–recall and calibration diagnostics. Threshold sliders are exploratory; official cutoffs are frozen using validation data.",
     },
   ],
 };
