@@ -43,7 +43,7 @@ export const PROBLEM = {
 export const FEATURE_STAGES = [
   {
     title: "Freeze the event",
-    body: `${int(R.sourceRows)} simulated UCI events · 1 binary label each.`,
+    body: `${int(R.sourceRows)} simulated UCI events · one binary class_label per event (target, not an input feature).`,
   },
   {
     title: "Lock measurements",
@@ -51,11 +51,11 @@ export const FEATURE_STAGES = [
   },
   {
     title: "28-feature vector",
-    body: "21 low-level kinematics + 7 physicist-computed invariant masses.",
+    body: "21 low-level kinematics + 7 physicist-derived invariant masses; class_label remains the separate binary target.",
   },
   {
     title: "Three input slices",
-    body: "Every model trained on low_level (21), high_level (7), and all (28).",
+    body: "Ablation comparison: low_level (21), high_level (7), and all (28) inputs; class_label is never included in X.",
   },
 ];
 
@@ -219,8 +219,8 @@ export const FINDINGS = [
   },
   {
     metric: "15 run packages",
-    title: "Fully inspectable.",
-    body: "Every metric and prediction file opens directly inside the Streamlit workbench.",
+    title: "Artifact-backed evidence.",
+    body: "Saved metrics and predictions are inspectable in the Streamlit workbench; opening the dashboard does not retrain models.",
   },
 ];
 
