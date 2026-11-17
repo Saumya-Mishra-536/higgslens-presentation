@@ -16,14 +16,14 @@ export default function S09Reproducibility(_: SceneProps) {
         <div className="s09-badges num">
           <span>seed {R.seed}</span>
           <span>{zeroOverlap} overlap</span>
-          <span>{R.determinism.max_abs_probability_diff.toFixed(1)} CPU diff</span>
+          <span>{R.determinism.max_abs_probability_diff.toFixed(1)} CPU diff · 2 runs / {R.determinism.epochs} epochs</span>
         </div>
       </header>
 
       <div className="s09-reg-strip rise" style={{ animationDelay: "0.25s" }} aria-label="Regularization and optimization controls">
-        <span><b className="num">BatchNorm + ReLU</b> stabilize hidden activations</span>
+        <span><b className="num">StandardScaler (train only)</b> scales input features; <b className="num">BatchNorm1d</b> normalizes hidden activations</span>
         <span><b className="num">Dropout 0.20 / 0.10</b> + <b className="num">AdamW decay 1e-4 / 1e-5</b> prevent overfitting</span>
-        <span><b className="num">Cosine LR + Patience 5/8</b> early stopping on validation only</span>
+        <span><b className="num">BCEWithLogitsLoss + AdamW</b> optimize logits; cosine LR on deep runs; early stopping monitors validation ROC-AUC (patience 5/8)</span>
       </div>
 
       {/* Animated Protocol & Leakage Firewall Diagram */}
