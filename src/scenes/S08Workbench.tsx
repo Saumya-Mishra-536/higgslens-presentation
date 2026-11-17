@@ -31,7 +31,7 @@ export default function S08Workbench({ step, setStep }: SceneProps) {
               Next
             </button>
           </div>
-          <p className="note num">streamlit run streamlit_app.py</p>
+          <p className="note num">Reads saved artifacts · no startup training</p>
         </div>
       </div>
       <figure className="s08-shot">
